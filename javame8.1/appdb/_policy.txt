@@ -1,0 +1,215 @@
+client untrusted;
+
+grant allowed "meep" {
+    permission javax.microedition.midlet.AutoStartPermission;
+    permission javax.microedition.event.EventPermission "*" "post,postsystem,read,register";
+    permission javax.microedition.power.PowerStatePermission "set";
+    permission javax.microedition.power.PowerStatePermission "setUrgent";
+    permission javax.microedition.swm.SWMPermission "crossClient" "installation,manageTask,manageSuite";
+    permission javax.microedition.io.PushRegistryPermission "*" "static,dynamic,alarm";
+    permission javax.microedition.io.IMCProtocolPermission "imc://:*:*;";
+    permission javax.microedition.io.IMCProtocolPermission "imc://*:*:*;";
+}
+
+grant allowed "cldc" {
+    permission java.io.FilePermission "<<ALL FILES>>" "read,write,delete,execute,readlink";
+    permission java.util.PropertyPermission "*" "read,write";
+    permission java.lang.RuntimePermission "*";
+    permission java.util.logging.LoggingPermission "control" null;
+}
+
+grant allowed "gcf" {
+    permission javax.microedition.io.SocketProtocolPermission "socket://*:*" ;
+    permission javax.microedition.io.SocketProtocolPermission "socket://:*" ;
+    permission javax.microedition.io.HttpProtocolPermission "http://*:*" ;
+    permission javax.microedition.io.HttpsProtocolPermission "https://*:*" ;
+    permission javax.microedition.io.SSLProtocolPermission "ssl://*:*" ;
+    permission javax.microedition.io.SSLProtocolPermission "ssl://:*" ;
+    permission javax.microedition.io.DatagramProtocolPermission "datagram://*:*" ;
+    permission javax.microedition.io.DatagramProtocolPermission "datagram://:*" ;
+    permission javax.microedition.io.CommProtocolPermission "comm:*" ;
+    permission javax.microedition.io.AccessPointPermission "*";
+    permission javax.microedition.io.FileProtocolPermission "file:///-" "read,write";
+    permission javax.microedition.io.DTLSProtocolPermission "dtls://*:*";
+    permission javax.microedition.io.MulticastProtocolPermission "multicast://*:*";
+    permission javax.microedition.io.MulticastProtocolPermission "multicast://:*";
+}
+
+grant allowed "deviceaccess" {
+    permission jdk.dio.generic.GenericPermission "*:*" "open,powermanage";
+    permission jdk.dio.dac.DACPermission "*:*" "open,powermanage";
+    permission jdk.dio.adc.ADCPermission "*:*" "open,powermanage";
+    permission jdk.dio.atcmd.ATPermission "*:*" "open,data,powermanage";
+    permission jdk.dio.counter.CounterPermission "*:*" "open,powermanage";
+    permission jdk.dio.gpio.GPIOPinPermission "*:*" "open,powermanage,setdirection";
+    permission jdk.dio.gpio.GPIOPortPermission "*" "open,powermanage,setdirection";
+    permission jdk.dio.i2cbus.I2CPermission "*:*" "open,powermanage";
+    permission jdk.dio.mmio.MMIOPermission "*:*" "open,powermanage";
+    permission jdk.dio.DeviceMgmtPermission "*:*" "open,register,unregister";
+    permission jdk.dio.pwm.PWMPermission "*:*" "open,powermanage";
+    permission jdk.dio.spibus.SPIPermission "*:*" "open,powermanage";
+    permission jdk.dio.uart.UARTPermission "*:*" "open,powermanage";
+    permission jdk.dio.watchdog.WatchdogTimerPermission "*:*" "open,powermanage";
+}
+
+grant allowed "jsr75" {
+    permission javax.microedition.io.Connector.file.read;
+    permission javax.microedition.io.Connector.file.write;
+}
+
+grant allowed "jsr177" {
+}
+
+grant allowed "jsr179" {
+    permission javax.microedition.location.LocationPermission "location" "location,autonomous,clm,aflt,hybrid,msbased";
+    permission javax.microedition.location.LocationPermission "orientation" "orientation";
+    permission javax.microedition.location.LocationPermission "proximity_listener" "proximity";
+    permission javax.microedition.location.LocationPermission "landmark_store" "read,write,category,management";
+}
+
+client Operator;
+
+grant allowed "keystore" {
+    permission com.oracle.crypto.keystore.KeyStorePermission "client_only";
+}
+
+grant allowed "meep" {
+    permission javax.microedition.midlet.AutoStartPermission;
+    permission javax.microedition.event.EventPermission "*" "post,postsystem,read,register";
+    permission javax.microedition.power.PowerStatePermission "set";
+    permission javax.microedition.power.PowerStatePermission "setUrgent";
+    permission javax.microedition.swm.SWMPermission "crossClient" "installation,manageTask,manageSuite";
+    permission javax.microedition.io.PushRegistryPermission "*" "static,dynamic,alarm";
+    permission javax.microedition.io.IMCProtocolPermission "imc://:*:*;";
+    permission javax.microedition.io.IMCProtocolPermission "imc://*:*:*;";
+}
+
+grant allowed "cldc" {
+    permission java.io.FilePermission "<<ALL FILES>>" "read,write,delete,execute,readlink";
+    permission java.util.PropertyPermission "*" "read,write";
+    permission java.lang.RuntimePermission "*";
+    permission java.util.logging.LoggingPermission "control" null;
+}
+
+grant allowed "gcf" {
+    permission javax.microedition.io.SocketProtocolPermission "socket://*:*" ;
+    permission javax.microedition.io.SocketProtocolPermission "socket://:*" ;
+    permission javax.microedition.io.HttpProtocolPermission "http://*:*" ;
+    permission javax.microedition.io.HttpsProtocolPermission "https://*:*" ;
+    permission javax.microedition.io.SSLProtocolPermission "ssl://*:*" ;
+    permission javax.microedition.io.SSLProtocolPermission "ssl://:*" ;
+    permission javax.microedition.io.DatagramProtocolPermission "datagram://*:*" ;
+    permission javax.microedition.io.DatagramProtocolPermission "datagram://:*" ;
+    permission javax.microedition.io.CommProtocolPermission "comm:*" ;
+    permission javax.microedition.io.AccessPointPermission "*";
+    permission javax.microedition.io.FileProtocolPermission "file:///-" "read,write";
+    permission javax.microedition.io.DTLSProtocolPermission "dtls://*:*";
+    permission javax.microedition.io.MulticastProtocolPermission "multicast://*:*";
+    permission javax.microedition.io.MulticastProtocolPermission "multicast://:*";
+}
+
+grant allowed "deviceaccess" {
+    permission jdk.dio.generic.GenericPermission "*:*" "open,powermanage";
+    permission jdk.dio.dac.DACPermission "*:*" "open,powermanage";
+    permission jdk.dio.adc.ADCPermission "*:*" "open,powermanage";
+    permission jdk.dio.atcmd.ATPermission "*:*" "open,data,powermanage";
+    permission jdk.dio.counter.CounterPermission "*:*" "open,powermanage";
+    permission jdk.dio.gpio.GPIOPinPermission "*:*" "open,powermanage,setdirection";
+    permission jdk.dio.gpio.GPIOPortPermission "*" "open,powermanage,setdirection";
+    permission jdk.dio.i2cbus.I2CPermission "*:*" "open,powermanage";
+    permission jdk.dio.mmio.MMIOPermission "*:*" "open,powermanage";
+    permission jdk.dio.DeviceMgmtPermission "*:*" "open,register,unregister";
+    permission jdk.dio.pwm.PWMPermission "*:*" "open,powermanage";
+    permission jdk.dio.spibus.SPIPermission "*:*" "open,powermanage";
+    permission jdk.dio.uart.UARTPermission "*:*" "open,powermanage";
+    permission jdk.dio.watchdog.WatchdogTimerPermission "*:*" "open,powermanage";
+}
+
+grant allowed "jsr75" {
+    permission javax.microedition.io.Connector.file.read;
+    permission javax.microedition.io.Connector.file.write;
+}
+
+grant allowed "jsr177" {
+}
+
+grant allowed "jsr179" {
+    permission javax.microedition.location.LocationPermission "location" "location,autonomous,clm,aflt,hybrid,msbased";
+    permission javax.microedition.location.LocationPermission "orientation" "orientation";
+    permission javax.microedition.location.LocationPermission "proximity_listener" "proximity";
+    permission javax.microedition.location.LocationPermission "landmark_store" "read,write,category,management";
+}
+
+client Manufacturer;
+
+grant allowed "keystore" {
+    permission com.oracle.crypto.keystore.KeyStorePermission "*";
+}
+
+grant allowed "meep" {
+    permission javax.microedition.midlet.AutoStartPermission;
+    permission javax.microedition.event.EventPermission "*" "post,postsystem,read,register";
+    permission javax.microedition.power.PowerStatePermission "set";
+    permission javax.microedition.power.PowerStatePermission "setUrgent";
+    permission javax.microedition.swm.SWMPermission "crossClient" "installation,manageTask,manageSuite";
+    permission javax.microedition.io.PushRegistryPermission "*" "static,dynamic,alarm";
+    permission javax.microedition.io.IMCProtocolPermission "imc://:*:*;";
+    permission javax.microedition.io.IMCProtocolPermission "imc://*:*:*;";
+}
+
+grant allowed "cldc" {
+    permission java.io.FilePermission "<<ALL FILES>>" "read,write,delete,execute,readlink";
+    permission java.util.PropertyPermission "*" "read,write";
+    permission java.lang.RuntimePermission "*";
+    permission java.util.logging.LoggingPermission "control" null;
+}
+
+grant allowed "gcf" {
+    permission javax.microedition.io.SocketProtocolPermission "socket://*:*" ;
+    permission javax.microedition.io.SocketProtocolPermission "socket://:*" ;
+    permission javax.microedition.io.HttpProtocolPermission "http://*:*" ;
+    permission javax.microedition.io.HttpsProtocolPermission "https://*:*" ;
+    permission javax.microedition.io.SSLProtocolPermission "ssl://*:*" ;
+    permission javax.microedition.io.SSLProtocolPermission "ssl://:*" ;
+    permission javax.microedition.io.DatagramProtocolPermission "datagram://*:*" ;
+    permission javax.microedition.io.DatagramProtocolPermission "datagram://:*" ;
+    permission javax.microedition.io.CommProtocolPermission "comm:*" ;
+    permission javax.microedition.io.AccessPointPermission "*";
+    permission javax.microedition.io.FileProtocolPermission "file:///-" "read,write";
+    permission javax.microedition.io.DTLSProtocolPermission "dtls://*:*";
+    permission javax.microedition.io.MulticastProtocolPermission "multicast://*:*";
+    permission javax.microedition.io.MulticastProtocolPermission "multicast://:*";
+}
+
+grant allowed "deviceaccess" {
+    permission jdk.dio.generic.GenericPermission "*:*" "open,powermanage";
+    permission jdk.dio.dac.DACPermission "*:*" "open,powermanage";
+    permission jdk.dio.adc.ADCPermission "*:*" "open,powermanage";
+    permission jdk.dio.atcmd.ATPermission "*:*" "open,data,powermanage";
+    permission jdk.dio.counter.CounterPermission "*:*" "open,powermanage";
+    permission jdk.dio.gpio.GPIOPinPermission "*:*" "open,powermanage,setdirection";
+    permission jdk.dio.gpio.GPIOPortPermission "*" "open,powermanage,setdirection";
+    permission jdk.dio.i2cbus.I2CPermission "*:*" "open,powermanage";
+    permission jdk.dio.mmio.MMIOPermission "*:*" "open,powermanage";
+    permission jdk.dio.DeviceMgmtPermission "*:*" "open,register,unregister";
+    permission jdk.dio.pwm.PWMPermission "*:*" "open,powermanage";
+    permission jdk.dio.spibus.SPIPermission "*:*" "open,powermanage";
+    permission jdk.dio.uart.UARTPermission "*:*" "open,powermanage";
+    permission jdk.dio.watchdog.WatchdogTimerPermission "*:*" "open,powermanage";
+}
+
+grant allowed "jsr75" {
+    permission javax.microedition.io.Connector.file.read;
+    permission javax.microedition.io.Connector.file.write;
+}
+
+grant allowed "jsr177" {
+}
+
+grant allowed "jsr179" {
+    permission javax.microedition.location.LocationPermission "location" "location,autonomous,clm,aflt,hybrid,msbased";
+    permission javax.microedition.location.LocationPermission "orientation" "orientation";
+    permission javax.microedition.location.LocationPermission "proximity_listener" "proximity";
+    permission javax.microedition.location.LocationPermission "landmark_store" "read,write,category,management";
+}
+
